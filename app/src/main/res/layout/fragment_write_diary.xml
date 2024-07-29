@@ -1,0 +1,53 @@
+<!-- res/layout/fragment_write_diary.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/diary_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="写下你的日记..." />
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="30dp"
+        android:text="请选择您昨晚的入睡时间:" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/hour_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+        <Spinner
+            android:id="@+id/minute_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="TouchTargetSizeCheck"/>
+
+        <Spinner
+            android:id="@+id/ampm_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="TouchTargetSizeCheck" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/save_diary_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="保存" />
+</LinearLayout>

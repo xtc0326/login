@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Login" parent="Theme.Material3.Light.NoActionBar">
+        <!-- 设置状态栏颜色 -->
+        <item name="android:statusBarColor">@color/my_light_primary</item>
+        <!-- 如果需要设置状态栏图标颜色为浅色（适合浅色背景） -->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- 继承自 Base.Theme.Login 的 Theme.Login -->
+    <style name="Theme.Login" parent="Base.Theme.Login">
+        <!-- 这里可以覆盖 Base.Theme.Login 中的属性，或者添加新的属性 -->
+    </style>
+</resources>
