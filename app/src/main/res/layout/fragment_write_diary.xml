@@ -1,53 +1,103 @@
-<!-- res/layout/fragment_write_diary.xml -->
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
 
-    <EditText
-        android:id="@+id/diary_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:hint="写下你的日记..." />
-
-    <TextView
-        android:layout_width="190dp"
-        android:layout_height="30dp"
-        android:text="请选择您昨晚的入睡时间:" />
+    android:background="@color/white"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:paddingLeft="10dp">
 
-        <Spinner
-            android:id="@+id/hour_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="TouchTargetSizeCheck"/>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/baseline_menu_24"></ImageView>
 
-        <Spinner
-            android:id="@+id/minute_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="TouchTargetSizeCheck"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <Spinner
-            android:id="@+id/ampm_spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:ignore="TouchTargetSizeCheck" />
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/baseline_add_24"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="睡眠日记"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+
+                android:textStyle="bold"></TextView>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="35dp"
+
+            android:layout_height="35dp"></ImageView>
     </LinearLayout>
 
-
     <Button
-        android:id="@+id/save_diary_button"
-        android:layout_width="wrap_content"
+        android:id="@+id/button_morning"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onClick"
+        android:text="清晨睡眠日记"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/buttonshape" />
+    <Button
+        android:id="@+id/button_night"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:onClick="onClick"
+        android:text="夜间睡眠日记"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/buttonshape"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:text="保存" />
+        android:text="日记使用说明"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1.什么是睡眠日记：睡眠日记可用来收集你每天的睡眠模式。
+2.我该多久以及在什么时候记录我的睡眠日记：你需要每天记睡眠日记。如果可能，睡眠日记应该在你早晨起床后的1小时内完成
+夜间的睡眠日记问题可以在你入睡前完成。3.如果我漏记了一天该怎么办：如果你忘记完成睡眠日记或者无法完成睡眠日记，
+就让那一天空在那里。4.如果一些不寻常的事情影响我的睡眠或我在白天的感受：如果你的睡眠或白天的功能被一些不同寻常的事情影响了（比如生病或看急诊），
+你或许可以在你的睡眠日记里做一个简单的标注。5.日记中的床和白天是什么意思：睡眠日记也可以被一些睡眠规律不一般的人群使用。这里的白天指醒着的时间，
+床指你通常去睡觉的地方。6.回答这些和睡眠相关的问题会不会让我睡不着：不要把睡眠日记当成问题，你不用担心时间的准确性，你也无须过度关注钟表。
+只要给出你最好的评估就足够。"
+        android:textSize="16dp"
+        android:layout_marginTop="20dp"
+        android:background="#fffff0"/>
 </LinearLayout>
+
+
+
+
+
+
