@@ -22,7 +22,7 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
     }
 
     @Override
-
+//更新
 
     public void onResp(BaseResp resp) {
         switch (resp.errCode) {
