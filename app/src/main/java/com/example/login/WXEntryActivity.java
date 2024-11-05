@@ -22,6 +22,8 @@ public class WXEntryActivity extends Activity implements IWXAPIEventHandler {
     }
 
     @Override
+
+
     public void onResp(BaseResp resp) {
         switch (resp.errCode) {
             case BaseResp.ErrCode.ERR_OK:
